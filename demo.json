@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Rick & Morty",
+        "author": "Justin Roiland",
+        "isOver": "false",
+        "imageUrl":"https://resources5.eaglepictures.com/image/1/630/945/5b509f00ceb60/rick-and-morty-stagione-1-cover.jpg",
+        "upvotes": "0",
+        "downvotes": "0"
+    },
+    {
+        "title": "Stranger Things",
+        "author": "Michael Stein",
+        "isOver": "false",
+        "imageUrl":"https://m.media-amazon.com/images/I/51KYyZ7v1IL._UF1000,1000_QL80_.jpg",
+        "upvotes": "0",
+        "downvotes": "0"
+    },
+    {
+        "title": "Squid Game",
+        "author": "Hwang Dong-hyuk",
+        "isOver": "false",
+        "imageUrl":"https://m.media-amazon.com/images/M/MV5BYWE3MDVkN2EtNjQ5MS00ZDQ4LTliNzYtMjc2YWMzMDEwMTA3XkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg",
+        "upvotes": "0",
+        "downvotes": "0"
+    },
+    {
+        "title": "The Witcher",
+        "author": "Lauren Schmidt Hissrich",
+        "isOver": "false",
+        "imageUrl":"https://static.wikia.nocookie.net/itwitcher/images/a/a4/Netflix_poster_s1.jpg/revision/latest?cb=20210812070423",
+        "upvotes": "0",
+        "downvotes": "0"
+    },
+    {
+        "title": "Narcos",
+        "author": "José Padilha",
+        "isOver": "true",
+        "imageUrl":"https://www.filmtv.it/imgbank/GALLERYXL/R201606/narcos_00.jpg",
+        "upvotes": "0",
+        "downvotes": "0"
+    }
+]
