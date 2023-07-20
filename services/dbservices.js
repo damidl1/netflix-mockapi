@@ -1,10 +1,10 @@
 class DBService {
-  static BASE_URL = "https://64b78c2521b9aa6eb0784ad1.mockapi.io";
+  
+    static getAllShows() {
+    
+    const url = "https://64b78c2521b9aa6eb0784ad1.mockapi.io/shows";
 
-  static getAllShows() {
-    const url = DBService.BASE_URL + "/shows";
-
-    return fetch(url, { method: "get" }).then((resp) => resp.json());
+    return fetch(url).then((resp) => resp.json());
   }
 
   static upDateShow(show) {
@@ -15,6 +15,17 @@ class DBService {
       body: JSON.stringify(show),
       headers: { "content-type": "application/json" },
     }).then((resp) => resp.json());
+  }
+
+  static createShow(show){
+    
+    const createUrl = 
+        "https://64b78c2521b9aa6eb0784ad1.mockapi.io/shows";
+     return fetch(createUrl, {
+          method: "post",
+          body: JSON.stringify(show),
+          headers: { "content-type": "application/json" },
+     }).then((resp) => resp.json());
   }
 
   static upVote(show) {
