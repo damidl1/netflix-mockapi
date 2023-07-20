@@ -19,7 +19,12 @@ function render() {
             const showContainer = document.createElement('div');
             showContainer.classList.add('show-container');
 
-           showContainer.appendChild(createElementWithString('strong', show.title));
+            const strongTitle = createElementWithString('strong', show.title)
+           
+            strongTitle.classList.add('strong-title');
+
+            showContainer.appendChild(strongTitle);
+           
 
            const image = document.createElement('img');
            image.src= show.imageUrl;
@@ -46,3 +51,7 @@ function render() {
     }
 }
 
+
+const app = new AppController();
+
+app.init();
