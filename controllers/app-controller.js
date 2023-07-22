@@ -4,6 +4,17 @@ class AppController{
 
         this.shows = [];
         this.isVoting = false;
+        this.floatingInput = document.getElementById('floating-input');
+        this.newShowInput = document.getElementById('newShowInput');
+        this.orderMethod = orderMethod;
+        this.submitButton = document.getElementById('submitButton');
+        this.submitButton.addEventListener('click', () => {
+          const title = this.newShowInput.value.trim();
+          if(title){
+            this.sendData(title);
+            this.hideFloatingInput()
+          }
+        })
     }
 
     init(){
@@ -45,11 +56,11 @@ class AppController{
 
     renderShows(){
 
-        // if(this.orderMethod = 'upvote'){
-            //sorting per upvote          esempio per task
-        // } else if {
-             // sorting per downvote
-        // }
+        if(this.orderMethod = 'upvote'){
+          //  sorting per upvote          esempio per task
+        } else if (this.orderMethod = 'downvote') {
+          //   sorting per downvote
+        }
 
       const btnContainer = document.getElementById('btn-container');
       btnContainer.innerHTML = '';
@@ -76,7 +87,107 @@ class AppController{
 
         const titleNode = document.createTextNode(show.title);
         listElement.appendChild(titleNode);
+
+        const upVotesSpan = document.createElement('span');
+        upVotesSpan.appendChild(document.createTextNode(show.upVotes));
+        upVotesSpan.classList.add('upVotesSpan');
+        listElement.appendChild(upVotesSpan);
+
+        const upButton = document.createElement('button');
+        upButton.appendChild(document.createTextNode('👍'));
+        upButton.addEventListener('click', () => this.upVoteShow(show));
+        upButton.classList.add('upBtn');
+        listElement.appendChild(upButton);
+
+        const downVotesSpan = document.createElement('span');
+        downVotesSpan.appendChild(document.createTextNode(show.downVotes));
+        listElement.appendChild(downVotesSpan);
+        
+
+        const downButton = document.createElement('button');
+        downButton.appendChild(document.createTextNode('👎'));
+        downButton.addEventListener('click', () => this.downVoteShow(show));
+        downButton.classList.add('downBtn');
+        listElement.appendChild(downButton);
+
+        const image = document.createElement('img');
+        image.src= show.imageUrl;
+
+        // const floatingInput = document.getElementById('floating-input');
+        // const newShowInput = document.getElementById('newShowInput');
+        // const submitButton = document.getElementById('submitButton');
+           
+        
+        
+        showsContainer.appendChild(image);
+
+        showsContainer.appendChild(listElement);
         
       }
+
+      const floatingInput = this.floatingInput;
+      const newShowInput = this.newShowInput;
+      const submitButton = this.submitButton;
+         
+
+      const showInputBtn = document.createElement('button');
+        showInputBtn.appendChild(document.createTextNode('Inserisci un nuovo show'));
+        showInputBtn.classList.add('showInputBtn');
+        showsContainer.appendChild(showInputBtn)
+        showInputBtn.addEventListener('click', () => {
+          this.showFloatingInput();
+        });
+
     }
+
+    upVoteShow(show){
+
+      if(!this.isVoting){
+
+        this.isVoting = true;
+
+        DBService.upVote(show).then(show => {
+          this.renderShows();
+          this.isVoting = false;
+        });
+      }
+    }
+
+    downVoteShow(show){
+
+      if(!this.isVoting){
+
+        this.isVoting = true;
+        DBService.downVote(show).then(show => {
+          this.renderShows();
+          this.isVoting = false;
+        });
+      }
+    }
+
+    sortByUpvotes(){
+
+      this.shows.sort((s1, s2) => s2.upVotes - s1.upVotes);
+      this.renderShows();
+    }
+
+    sortByDownvotes(){
+
+      this.shows.sort((s1, s2) => s2.downVotes - s1.downVotes);
+      this.renderShows();
+    }
+
+    showFloatingInput(){
+
+      this.floatingInput.style.display = 'block';
+    }
+
+    hideFloatingInput(){
+
+      this.floatingInput.style.display = 'none';
+      this.newShowInput.value = '';
+    }
+
+ 
 }
+
