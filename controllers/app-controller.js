@@ -6,15 +6,14 @@ class AppController{
         this.isVoting = false;
         this.floatingInput = document.getElementById('floating-input');
         this.newShowInput = document.getElementById('newShowInput');
-        this.orderMethod = orderMethod;
-        this.submitButton = document.getElementById('submitButton');
-        this.submitButton.addEventListener('click', () => {
-          const title = this.newShowInput.value.trim();
-          if(title){
-            this.sendData(title);
-            this.hideFloatingInput()
-          }
-        })
+        // this.submitButton = document.getElementById('submitButton');
+        // this.submitButton.addEventListener('click', () => {
+        //   const title = this.newShowInput.value.trim();
+        //   if(title){
+        //     this.sendData(title);
+        //     this.hideFloatingInput()
+        //   }
+        // })
     }
 
     init(){
@@ -56,11 +55,11 @@ class AppController{
 
     renderShows(){
 
-        if(this.orderMethod = 'upvote'){
-          //  sorting per upvote          esempio per task
-        } else if (this.orderMethod = 'downvote') {
-          //   sorting per downvote
-        }
+        // if(this.orderMethod = 'upvote'){
+            //sorting per upvote          esempio per task
+        // } else if {
+             // sorting per downvote
+        // }
 
       const btnContainer = document.getElementById('btn-container');
       btnContainer.innerHTML = '';
@@ -125,18 +124,18 @@ class AppController{
         
       }
 
-      const floatingInput = this.floatingInput;
-      const newShowInput = this.newShowInput;
-      const submitButton = this.submitButton;
+      // const floatingInput = this.floatingInput;
+      // const newShowInput = this.newShowInput;
+      // const submitButton = this.submitButton;
          
 
-      const showInputBtn = document.createElement('button');
-        showInputBtn.appendChild(document.createTextNode('Inserisci un nuovo show'));
-        showInputBtn.classList.add('showInputBtn');
-        showsContainer.appendChild(showInputBtn)
-        showInputBtn.addEventListener('click', () => {
-          this.showFloatingInput();
-        });
+      // const showInputBtn = document.createElement('button');
+      //   showInputBtn.appendChild(document.createTextNode('Inserisci un nuovo show'));
+      //   showInputBtn.classList.add('showInputBtn');
+      //   showsContainer.appendChild(showInputBtn)
+      //   showInputBtn.addEventListener('click', () => {
+      //     this.showFloatingInput();
+      //   });
 
     }
 
