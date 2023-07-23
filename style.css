@@ -42,6 +42,36 @@ button {
     cursor: pointer;
 }
 
+.sortUpBtn, 
+.sortDownBtn, 
+a,
+.upBtn,
+.downBtn{
+    
+    transition: background-color 0.3s, height 0.3s;
+
+}
+
+.sortUpBtn:hover,
+.sortDownBtn:hover,
+a:hover,
+.upBtn:hover,
+.downBtn:hover {
+    background-color: #6c756d;
+}
+
+
+.sortUpBtn:active,
+.sortDownBtn:active,
+a:active,
+.upBtn:active,
+.downBtn:active {
+
+     background-color: #5e665d;
+     height: 30px;
+}
+
+
 span {
     margin: 0px 4px;
     font-weight: bold;
@@ -71,6 +101,8 @@ a {
     text-decoration: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 }
 

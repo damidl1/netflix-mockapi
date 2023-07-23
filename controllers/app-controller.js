@@ -31,8 +31,8 @@ class AppController{
        appContainer.innerHTML = `
        <header>
       
-        <a href= "./index.html">lista</a>
-        <a href= "./new-show.html">nuovo</a>
+        <a href= "./index.html">Lista Show</a>
+        <a href= "./new-show.html">Nuovo Show</a>
       
        </header>
      
