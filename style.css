@@ -1,4 +1,4 @@
-body{
+/* body{
     box-sizing: border-box;
     background-color: black;
     color: white;
@@ -6,9 +6,10 @@ body{
     flex-wrap: wrap;
     justify-content: center; 
     align-items: center;
-}
+    margin: 0;
+} */
 
-header{
+/* header{
     color: red;
     display: flex;
     font-size: xx-large;
@@ -16,32 +17,48 @@ header{
     text-align: center;
     padding: 1rem;
     width: 100%;
-}
+} */
 
 
-#main-container{
+/* #main-container{
     display: flex;
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
 
-}
-.show-container{
+} */
+
+/* 
+#app{
+    
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+
+} */
+
+
+
+
+/* .show-container{
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; 
     border: 3px solid red;
     border-radius: 10px;
     width: 300px;
     height: 600px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; 
+}*/
 
     
     
-}
 
-.show-container button {
+
+/* .show-container button {
     height: 30px;
     width: 30px;
     margin: 0px;
@@ -53,9 +70,9 @@ header{
 
 img{
     width: 250px;
-}
+} */
 
-.strong-title{
+/* .strong-title{
 
     display: flex;
     margin: 0px;
@@ -64,36 +81,139 @@ img{
     font-size: x-large;
 }
 
-#floating-input {
 
-    position: fixed;
-    top: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
-    background-color: bisque;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: none;
+footer{
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+} */
+
+
+
+body {
+    background-color: black;
+    
 }
 
-#floating-input input, #floating-input button{
+header {
 
-    margin: 5px;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-#floating-input button{
+h1 {
+    font-size: 15vw;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
 
-    background-color: brown;
+
+img{
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    min-height: 400px;
+    
+}
+
+button {
+
+   
+    background-color: transparent;
     color: white;
+    font-size: 16px;
+    width: 180px;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     cursor: pointer;
+}
+
+span {
+    margin: 0px 4px;
+    font-weight: bold;
+}
+
+
+
+li {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    gap: 10px;
+    margin-bottom: 80px;
 
 }
 
-#floating-input button:hover{
-    background-color: azure;
+li strong {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-weight: 200;
+
 }
+
+
+li button {
+    width: 100%;
+    margin: 0;
+
+
+}
+
+.upBtn{
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#shows-container {
+    font-size: x-large;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+
+}
+
+#btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+}
+
+
+
+form {
+
+    font-size: 16px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+
+
+footer {
+    border-top: 1px solid rgb(220, 13, 13);
+    text-align: center;
+    padding: 30px 10px;
+    line-height: 1.6em;
+    font-size: 0.8em;
+    background-color: rgb(11, 11, 11);
+    color: #fff;
+}
+
