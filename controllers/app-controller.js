@@ -31,13 +31,14 @@ class AppController{
        appContainer.innerHTML = `
        <header>
       
-       <a href= "./index.html">lista</a>
-       <a href= "./new-show.html">nuovo</a>
-     </header>
+        <a href= "./index.html">lista</a>
+        <a href= "./new-show.html">nuovo</a>
+      
+       </header>
      
      <main>
-       <div id="btn-container"></div>
-       <ul id="shows-container"></ul>
+        <div id="btn-container"></div>
+        <ul id="shows-container"></ul>
      </main>
      
      <footer>
@@ -155,30 +156,56 @@ class AppController{
 
     }
 
+    // upVoteShow(show){
+
+    //   if(!this.isVoting){
+
+    //     this.isVoting = true;
+
+    //     DBService.upVote(show).then(show => {
+    //       this.renderShows();
+    //       this.isVoting = false;
+    //     });
+    //   }
+    // }
+
     upVoteShow(show){
-
       if(!this.isVoting){
-
-        this.isVoting = true;
-
-        DBService.upVote(show).then(show => {
-          this.renderShows();
-          this.isVoting = false;
-        });
+          this.isVoting = true;
+          DBService.upVote(show).then(upDateShow => {
+              show.upVotes = upDateShow.upVotes;
+              this.shows.sort((s1, s2) => s2.upVotes - s1.upVotes);
+              this.renderShows();
+              this.isVoting = false;
+          });
       }
-    }
+  }
 
-    downVoteShow(show){
 
-      if(!this.isVoting){
-
+  downVoteShow(show){
+    if(!this.isVoting){
         this.isVoting = true;
-        DBService.downVote(show).then(show => {
-          this.renderShows();
-          this.isVoting = false;
+        DBService.downVote(show).then(upDateShow => {
+            show.downVotes = upDateShow.downVotes;
+            this.shows.sort((s1, s2) => s2.downVotes - s1.downVotes);
+            this.renderShows();
+            this.isVoting = false;
         });
-      }
     }
+}
+
+
+    // downVoteShow(show){
+
+    //   if(!this.isVoting){
+
+    //     this.isVoting = true;
+    //     DBService.downVote(show).then(show => {
+    //       this.renderShows();
+    //       this.isVoting = false;
+    //     });
+    //   }
+    // }
 
     sortByUpvotes(){
 

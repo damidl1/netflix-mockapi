@@ -1,3 +1,174 @@
+
+body {
+    background-color: black;
+    padding-top: 80px;
+
+}
+
+header {
+
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 15vw;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+img {
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 300px;
+    min-height: 400px;
+
+}
+
+button {
+
+
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+span {
+    margin: 0px 4px;
+    font-weight: bold;
+}
+
+label {
+    color: red;
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+h2 {
+    color: red;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 30px;
+}
+
+
+a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+
+}
+
+.upVotesSpan {
+    color: white;
+}
+
+
+.downVotesSpan {
+    color: white;
+}
+
+
+li {
+    width: 200px;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    gap: 10px;
+    margin-bottom: 80px;
+
+}
+
+li strong {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-weight: 200;
+
+}
+
+
+li button {
+
+    width: 100%;
+    margin: 0;
+
+}
+
+.upBtn {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#shows-container {
+    font-size: x-large;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* align-items: baseline; */
+    justify-content: center;
+
+}
+
+#btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+
+form {
+
+    font-size: 16px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+
+
+footer {
+    border-top: 1px solid rgb(220, 13, 13);
+    text-align: center;
+    padding: 30px 10px;
+    line-height: 1.6em;
+    font-size: 0.8em;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
 /* body{
     box-sizing: border-box;
     background-color: black;
@@ -45,7 +216,7 @@
 /* .show-container{
     display: flex;
     /* flex-direction: column; */
-    /* flex-wrap: wrap; 
+/* flex-wrap: wrap; 
     border: 3px solid red;
     border-radius: 10px;
     width: 300px;
@@ -54,8 +225,8 @@
     justify-content: center; 
 }*/
 
-    
-    
+
+
 
 
 /* .show-container button {
@@ -90,130 +261,4 @@ footer{
     justify-content: center;
 } */
 
-
-
-body {
-    background-color: black;
-    
-}
-
-header {
-
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    font-size: 15vw;
-    color: red;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-
-img{
-    max-width: 300px;
-    min-width: 300px;
-    max-height: 300px;
-    min-height: 400px;
-    
-}
-
-button {
-
-   
-    background-color: transparent;
-    color: white;
-    font-size: 16px;
-    width: 180px;
-    padding: 8px;
-    border-radius: 5px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    cursor: pointer;
-}
-
-span {
-    margin: 0px 4px;
-    font-weight: bold;
-}
-
-
-
-li {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    gap: 10px;
-    margin-bottom: 80px;
-
-}
-
-li strong {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-weight: 200;
-
-}
-
-
-li button {
-    width: 100%;
-    margin: 0;
-
-
-}
-
-.upBtn{
-
-    display: flex;
-    flex-direction: column;
-    
-}
-
-#shows-container {
-    font-size: x-large;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: center;
-
-}
-
-#btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    margin: auto;
-}
-
-
-
-form {
-
-    font-size: 16px;
-    gap: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-
-}
-
-
-
-footer {
-    border-top: 1px solid rgb(220, 13, 13);
-    text-align: center;
-    padding: 30px 10px;
-    line-height: 1.6em;
-    font-size: 0.8em;
-    background-color: rgb(11, 11, 11);
-    color: #fff;
-}
 
