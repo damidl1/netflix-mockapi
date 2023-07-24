@@ -10,13 +10,46 @@
     <header>
         <h1>MOCKFLIX</h1>
     </header>
-    <!-- <div id="floating-input">
-        <input type="text" id="newShowInput" placeholder="Inserisci un nuovo show">
-        <button id="submitButton">Invia</button>
-        <button id="showInputButton">Inserisci un nuovo Show</button>
-    </div> -->
+   
     <div id="app">
         
+    </div>
+    <div>
+        <dialog id="newShowDialog">
+            <form id="create-form" name="create" method="dialog" onsubmit="sendData(event)">
+             <div>
+                <form id="create-form" name="create" onsubmit="sendData(event)">
+                    <div>
+                        <label for="title">Inserisci il titolo</label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+        
+                    <div>
+                        <label for="author">Inserisci l'autore</label>
+                        <input type="text" name="author" id="author" required>
+                    </div>
+        
+                    <div>
+                        <label for="imageUrl">Inserisci l'url dell'immagine</label>
+                        <input type="text" name="imageUrl" id="imageUrl" required>
+                    </div>
+        
+                    <div>
+                        <label for="isOver">Spunta se la serie è conclusa</label>
+                        <input type="checkbox" name="isOver" id="isOver">
+                    </div>
+                    <div>
+                        <button id="cancelButton">Cancel</button>
+                        <button id="confirmButton" type="submit" formmethod="dialog">Confirm</button>
+                    </div>
+                        <!-- <button type="submit">Invia</button> -->
+            </form>
+          </dialog>
+          <p>
+            <button id="showDialog">Show the dialog</button>
+          </p>
+          
+          
     </div>
     <!-- <main>
         <div id="main-container">

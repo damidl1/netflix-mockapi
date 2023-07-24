@@ -5,14 +5,7 @@ class AppController{
         this.shows = [];
         this.isVoting = false;
         this.orderMethod = 'upvote';
-        // this.submitButton = document.getElementById('submitButton');
-        // this.submitButton.addEventListener('click', () => {
-        //   const title = this.newShowInput.value.trim();
-        //   if(title){
-        //     this.sendData(title);
-        //     this.hideFloatingInput()
-        //   }
-        // })
+      
     }
 
     init(){
@@ -129,10 +122,6 @@ class AppController{
         const image = document.createElement('img');
         image.src= show.imageUrl;
 
-        // const floatingInput = document.getElementById('floating-input');
-        // const newShowInput = document.getElementById('newShowInput');
-        // const submitButton = document.getElementById('submitButton');
-           
         
         
         showsContainer.appendChild(image);
@@ -141,18 +130,7 @@ class AppController{
         
       }
 
-      // const floatingInput = this.floatingInput;
-      // const newShowInput = this.newShowInput;
-      // const submitButton = this.submitButton;
-         
-
-      // const showInputBtn = document.createElement('button');
-      //   showInputBtn.appendChild(document.createTextNode('Inserisci un nuovo show'));
-      //   showInputBtn.classList.add('showInputBtn');
-      //   showsContainer.appendChild(showInputBtn)
-      //   showInputBtn.addEventListener('click', () => {
-      //     this.showFloatingInput();
-      //   });
+      
 
     }
 
@@ -219,17 +197,7 @@ class AppController{
       this.renderShows();
     }
 
-    // showFloatingInput(){
-
-    //   this.floatingInput.style.display = 'block';
-    // }
-
-    // hideFloatingInput(){
-
-    //   this.floatingInput.style.display = 'none';
-    //   this.newShowInput.value = '';
-    // }
-
+   
  
 }
 

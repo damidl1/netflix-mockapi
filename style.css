@@ -197,7 +197,19 @@ footer {
 }
 
 
+#cancelButton{
+    background-color: black;
+    color: red;
+}
 
+#confirmButton{
+    background-color: black;
+    color: red;
+}
+
+#newShowDialog{
+    background-color: black;
+}
 
 
 
