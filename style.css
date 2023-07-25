@@ -211,6 +211,12 @@ footer {
     background-color: black;
 }
 
+.dialog-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 /* body{
